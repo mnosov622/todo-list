@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <script src="./script.js" defer></script>
+    <script src="./firebase.js" defer></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js" defer></script>
+
+    <!-- Firebase -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <a href="/"><img class="header__logo-img" src="./src/img/ToDO.png" alt="todo logo"></a>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="main__list">
+            <h4 class="main__list-title">Todo list:</h4>
+        </div>
+
+        <form class="main__form" action="">
+            <input class="main__add-input" type="text" placeholder="Enter your task"> 
+            <span class="main__error-msg"></span> 
+            <button type="submit">Add</button>
+        </form>
+    </main>
+
+</body>
+</html>

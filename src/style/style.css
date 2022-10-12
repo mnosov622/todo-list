@@ -1,0 +1,90 @@
+@import url('./reset.css');
+
+* {
+    font-family: "Poppins";
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(23, 52, 52);
+}
+
+.header__logo {
+    text-align: center;
+}
+
+.header__logo-img {
+    padding-top: .5%;
+    object-fit: cover;
+    max-width: 100%;
+    height: 50px;
+}
+
+.main__list {
+    margin: 2%;
+    max-width: 20%;
+    height: 80vh;
+}
+
+.main__list-item {
+    margin-top: 5%;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    box-shadow: 2px 2px 2px rgba(206, 203, 203, .5);
+    word-break: break-all;
+    position: relative;
+}
+
+.main__list-item:hover {
+    box-shadow: 5px 5px 2px rgba(206, 203, 203, .7);
+    transform: translateY(-2px);
+}
+
+.add-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url('../img/check.png');
+    width: 50px;
+    height: 50px;
+}
+
+.main__form {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+}
+
+input {
+    border: 1px solid darkcyan;
+    padding: 8%;
+    width: 100%;
+}
+
+.main__error-msg {
+    margin-top: 5px;
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 5%;
+    width: 100%;
+    transition: background-color .2s ease-in;
+}
+
+button:hover {
+    background-color: rgb(128, 164, 159);
+    color: #fff;
+}
+
+.remove {
+    text-decoration: line-through;
+}
+
