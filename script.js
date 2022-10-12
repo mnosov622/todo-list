@@ -35,6 +35,10 @@ function createItem() {
         items.forEach(item => {
             item.addEventListener('click', () => {
                 item.classList.add("remove");
+                const icon = document.createElement('img');
+                icon.src = "./src/img/check.png";
+                icon.className = "add-icon";
+                item.appendChild(icon);
             });
         }); 
 
