@@ -3,9 +3,11 @@ const input = document.querySelector(".main__add-input");
 const list = document.querySelector(".main__list");
 const errorMsg = document.querySelector(".main__error-msg");
 const tasksList = document.querySelector(".main__tasks-list");
+const delBtn = document.querySelector(".delBtn");
 
 form.addEventListener("submit", (e) => handleAdd(e));
 input.addEventListener("keyup", () => removeErrorMessage());
+delBtn.addEventListener("click", () => deleteAllItem());
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -59,6 +61,12 @@ function markAsComplete () {
             item.appendChild(icon);
         });
     });
+}
+
+function deleteAllItem() {
+    alert("Delete all the tasks?");
+    localStorage.clear();
+    location.reload();
 }
 
 markAsComplete();
