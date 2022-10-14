@@ -8,6 +8,20 @@
     height: 60px;
     width: 100%;
     background-color: rgb(23, 52, 52);
+    display: flex;
+    justify-content: center;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+.today__date {
+    color: white;
+    font-weight: 600;
 }
 
 .header__logo {
@@ -93,4 +107,11 @@ button:hover {
 
 .remove {
     text-decoration: line-through;
+}
+
+@media screen and (max-width:540px) {
+    .header__container {
+        justify-content: space-around;
+        width: 100%;
+    }
 }
