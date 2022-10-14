@@ -39,7 +39,7 @@ function createItem() {
         item.style.padding = "10px";
         item.innerText = input.value;
 
-        tasksList.appendChild(item);
+        tasksList.prepend(item);
         list.append(tasksList);
 
         tasks.push(input.value);
