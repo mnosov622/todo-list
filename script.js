@@ -55,9 +55,12 @@ function createItem() {
         tasks.push(input.value);
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
+    markAsComplete();
+}
 
-    const items = document.querySelectorAll(".main__list-item");
-    items.forEach((item) => {
+function markAsComplete () {
+    const itemsList = document.querySelectorAll(".main__list-item");
+    itemsList.forEach((item) => {
         item.addEventListener("click", () => {
             item.classList.add("remove");
             const icon = document.createElement("img");
@@ -67,6 +70,8 @@ function createItem() {
         });
     });
 }
+
+markAsComplete();
 
 function removeErrorMessage() {
     errorMsg.innerText = "";
