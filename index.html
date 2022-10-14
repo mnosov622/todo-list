@@ -19,17 +19,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- Google fonts -->
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Font awesome -->
+
 </head>
 <body>
 
     <header class="header">
         <div class="header__logo">
             <a href="/"><img class="header__logo-img" src="./src/img/ToDO.png" alt="todo logo"></a>
+            <div class="toggle">
+                <i id="toggle-on" onclick="myFunction()" class="fa-solid fa-toggle-on"></i>
+                <i id="toggle-off" onclick="myFunction()" class="fa-solid fa-toggle-off"></i>
+            </div>
         </div>
     </header>
 
     <main class="main">
-
         <div class="main__list">
             <h4 class="main__list-title">Todo list:</h4>
             <ul class="main__tasks-list">

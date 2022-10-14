@@ -4,6 +4,27 @@
     font-family: "Poppins";
 }
 
+:root{
+    --primary-color: white;
+    --secondary-color: white;
+    --third-color: black;
+    --fourth-color: white;
+    --fifth-color: #dcdcdc;
+}
+
+.dark-mode{
+    --primary-color: #121212;
+    --secondary-color: gray;
+    --third-color: white;
+    --fourth-color: #D4D4D4;
+    --fifth-color: #D4D4D4;
+}
+
+body{
+    background-color: var(--primary-color);
+    transition: 0.7s, ease-in-out;
+}
+
 .header {
     height: 60px;
     width: 100%;
@@ -11,14 +32,37 @@
 }
 
 .header__logo {
-    text-align: center;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    align-self: center;
 }
 
 .header__logo-img {
-    padding-top: .5%;
+    padding-top: .7%;
     object-fit: cover;
     max-width: 100%;
     height: 50px;
+    margin-right: 40vw;
+}
+
+.toggle{
+    font-size: xx-large;
+    margin-right: 10px;
+    
+}
+
+#toggle-on{
+    display: none;
+    color: #121212;
+}
+
+#toggle-off{
+    color: white;
+}
+
+.main__list-title{
+    color: var(--third-color);
 }
 
 .main__list {
@@ -34,6 +78,8 @@
     box-shadow: 2px 2px 2px rgba(206, 203, 203, .5);
     word-break: break-all;
     position: relative;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
 }
 
 .main__list-item:hover {
@@ -69,6 +115,8 @@ input {
     border: 1px solid darkcyan;
     padding: 8%;
     width: 100%;
+    
+    background-color: var(--fourth-color);
 }
 
 .main__error-msg {
@@ -84,6 +132,7 @@ button {
     padding: 5%;
     width: 100%;
     transition: background-color .2s ease-in;
+    background-color: var(--fifth-color);
 }
 
 button:hover {

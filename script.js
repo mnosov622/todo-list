@@ -3,6 +3,7 @@ const input = document.querySelector('.main__add-input');
 const list = document.querySelector('.main__list');
 const errorMsg = document.querySelector('.main__error-msg');
 const tasksList = document.querySelector('.main__tasks-list');
+let darkMode = false
 
 form.addEventListener('submit', (e) => handleAdd(e));
 input.addEventListener('keyup', () => removeErrorMessage());
@@ -76,4 +77,20 @@ function createItem() {
 
 function removeErrorMessage() {
     errorMsg.innerText = "";
+}
+
+
+// Dark Mode Function
+function myFunction() {
+    document.body.classList.toggle("dark-mode");
+    if (darkMode ==false){
+        document.getElementById("toggle-off").style.display = "none"
+        document.getElementById("toggle-on").style.display = "block"
+        darkMode=true
+    }
+    else{
+        document.getElementById("toggle-on").style.display = "none"
+        document.getElementById("toggle-off").style.display = "block"
+        darkMode=false
+    }
 }
