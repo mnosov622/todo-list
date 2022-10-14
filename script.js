@@ -13,6 +13,7 @@ if (tasks.length > 0) {
     tasks.forEach((task) => {
         const addedItem = document.createElement("li");
         addedItem.className = "main__list-item";
+        addClick(addedItem);
         addedItem.style.padding = "10px";
         addedItem.innerText = task;
         tasksList.appendChild(addedItem);
@@ -32,6 +33,16 @@ listOfTasks.forEach((task) => {
     tasks.appendChild(item);
     list.append(tasks);
 });
+
+function addClick(addedItem) {
+    addedItem.addEventListener("click", () => {
+        addedItem.classList.add("remove");
+        const icon = document.createElement("img");
+        icon.src = "./src/img/check.png";
+        icon.className = "add-icon";
+        addedItem.appendChild(icon);
+    });
+}
 
 function handleAdd(e) {
     e.preventDefault();
@@ -58,13 +69,7 @@ function createItem() {
 
     const items = document.querySelectorAll(".main__list-item");
     items.forEach((item) => {
-        item.addEventListener("click", () => {
-            item.classList.add("remove");
-            const icon = document.createElement("img");
-            icon.src = "./src/img/check.png";
-            icon.className = "add-icon";
-            item.appendChild(icon);
-        });
+        addClick(item);
     });
 }
 
