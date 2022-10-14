@@ -66,6 +66,14 @@ function createItem() {
             item.appendChild(icon);
         });
     });
+    
+    const all_done = document.querySelector(".all_done");
+    all_done.addEventListener("click", () => {
+        items.forEach((item) => {
+            item.click();
+        });
+    })
+
 }
 
 function removeErrorMessage() {

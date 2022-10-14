@@ -94,3 +94,19 @@ button:hover {
 .remove {
     text-decoration: line-through;
 }
+
+
+.all_done{
+    font-size: 0.9rem;
+    float: right;
+    padding-bottom: 15px;
+}
+.all_done img{
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+}
+.all_done:hover{
+    color: rgb(15, 225, 197);
+    cursor: pointer;
+}
