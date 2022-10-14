@@ -1,8 +1,14 @@
 # To do list for daily tasks
 
-## Suggestion, improvements
+## Get started
 
-If you have any suggeestions how to improve this project, please file an issue.
+1. Fork the project
+
+2. Clone it
+
+3. Run npm install
+
+4. open index.html
 
 ## Contribution
 
