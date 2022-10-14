@@ -11,14 +11,23 @@
 }
 
 .header__logo {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(148, 134, 230);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.header__logo h1{
+    padding-left: 10px;
+}
+
+
 .header__logo-img {
-    padding-top: 0.5%;
+    padding-top: 9%;
     object-fit: cover;
     max-width: 100%;
-    height: 50px;
+    height: 3.4rem;
 }
 
 .main__list {
