@@ -23,16 +23,6 @@ if (tasks.length > 0) {
     list.style.display = "none";
 }
 
-listOfTasks.forEach((task) => {
-    const tasks = document.querySelector(".main__tasks");
-    const item = document.createElement("li");
-    item.className = "main__list-item";
-    item.style.padding = "10px";
-    item.innerText = task;
-    tasks.appendChild(item);
-    list.append(tasks);
-});
-
 function handleAdd(e) {
     e.preventDefault();
     createItem();
