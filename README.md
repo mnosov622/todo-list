@@ -14,4 +14,4 @@
 
 #### You are free to pick any issue.
 
-You can find the project [here](https://mnosov622.github.io/todo-list/)
+### Please read [CONTRIBUTION.md](https://github.com/mnosov622/todo-list/blob/master/CONTRIBUTING.md) first
