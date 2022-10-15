@@ -40,8 +40,9 @@
 }
 
 .main__list {
-    margin: 2%;
-    max-width: 20%;
+    margin: 1rem;
+    width: 90%;
+    max-width: 500px;
     height: 80vh;
 }
 
@@ -80,7 +81,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 15%;
+    width: 50%;
+    max-width: 150px;
 }
 
 input {
