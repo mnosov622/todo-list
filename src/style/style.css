@@ -15,6 +15,7 @@
 .header__date {
     color: #fff;
     margin-left: 30px;
+    position: absolute;
 }
 
 .header__logo {
