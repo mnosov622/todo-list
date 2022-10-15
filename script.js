@@ -3,39 +3,41 @@ const input = document.querySelector('.main__add-input');
 const list = document.querySelector('.main__list');
 const errorMsg = document.querySelector('.main__error-msg');
 const tasksList = document.querySelector('.main__tasks-list');
-let darkMode = false
+const dateHolder = document.querySelector('.header__date');
+const date = new Date();
+let darkMode = false;
 
-form.addEventListener('submit', (e) => handleAdd(e));
-input.addEventListener('keyup', () => removeErrorMessage());
+const months = [
+    "January", "February", 
+    "March", "April", "May", 
+    "June", "July", "August",
+    "September", "October", 
+    "November", "December"
+];
+
+const day = date.getDate();
+const year = date.getFullYear();
+const monthName = months[date.getMonth()];
+dateHolder.innerHTML = ` Today is ${day} ${monthName}, ${year}`;
+
+form.addEventListener("submit", (e) => handleAdd(e));
+input.addEventListener("keyup", () => removeErrorMessage());
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-if(tasks.length > 0) {
-    tasks.forEach(task => {
-        const addedItem = document.createElement('li');
+if (tasks.length > 0) {
+    tasks.forEach((task) => {
+        const addedItem = document.createElement("li");
         addedItem.className = "main__list-item";
         addedItem.style.padding = "10px";
         addedItem.innerText = task;
         tasksList.appendChild(addedItem);
         list.append(tasksList);
         console.log(addedItem);
-    })
-
+    });
+} else {
+    list.style.display = "none";
 }
-
-else {
-    list.style.display = "none"
-}
-
-listOfTasks.forEach(task => {
-    const tasks = document.querySelector('.main__tasks');
-    const item = document.createElement('li');
-    item.className = "main__list-item";
-    item.style.padding = "10px";
-    item.innerText = task;
-    tasks.appendChild(item);
-    list.append(tasks);
-})
 
 function handleAdd(e) {
     e.preventDefault();
@@ -44,36 +46,64 @@ function handleAdd(e) {
 }
 
 function createItem() {
-    if(input.value.trim() === '') {
+    if (input.value.trim() === "") {
         errorMsg.innerText = "Please write your task";
-    }
-
-    else {
+    } else {
         list.style.display = "block";
-        const item = document.createElement('li');
+        const item = document.createElement("li");
         item.className = "main__list-item";
         item.style.padding = "10px";
         item.innerText = input.value;
 
-        tasksList.appendChild(item);
+        tasksList.prepend(item);
         list.append(tasksList);
 
         tasks.push(input.value);
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        localStorage.setItem("tasks", JSON.stringify(tasks));
     }
-
-    const items = document.querySelectorAll('.main__list-item')
-        items.forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.add("remove");
-                const icon = document.createElement('img');
-                icon.src = "./src/img/check.png";
-                icon.className = "add-icon";
-                item.appendChild(icon);
-            });
-        }); 
-
+    markAsComplete();
 }
+document.addEventListener('keydown', (event) => {
+    if (event.shiftKey) {
+        const itemsList = document.querySelectorAll(".main__list-item");
+        var first_ = itemsList[0];
+        var Last = itemsList[itemsList.length - 1];
+        itemsList.forEach((item) => {
+            if (item == first_) {
+                item.addEventListener("click", () => {
+                    itemsList.forEach((i) => {
+                        if (i == Last){
+                            i.addEventListener("click", ()=>{
+                                itemsList.forEach((j)=>{
+                                    j.classList.add("remove");
+                                    const icon = document.createElement("img");
+                                    icon.src = "./src/img/check.png";
+                                    icon.className = "add-icon";
+                                    j.appendChild(icon);
+                                })
+                            })
+                        }
+                    })
+
+                })
+            }
+        });
+    }
+});
+function markAsComplete () {
+    const itemsList = document.querySelectorAll(".main__list-item");
+    itemsList.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.classList.add("remove");
+            const icon = document.createElement("img");
+            icon.src = "./src/img/check.png";
+            icon.className = "add-icon";
+            item.appendChild(icon);
+        });
+    });
+}
+
+markAsComplete();
 
 function removeErrorMessage() {
     errorMsg.innerText = "";
@@ -83,14 +113,14 @@ function removeErrorMessage() {
 // Dark Mode Function
 function myFunction() {
     document.body.classList.toggle("dark-mode");
-    if (darkMode ==false){
-        document.getElementById("toggle-off").style.display = "none"
-        document.getElementById("toggle-on").style.display = "block"
-        darkMode=true
+    if (darkMode ==false) {
+        document.getElementById("toggle-off").style.display = "none";
+        document.getElementById("toggle-on").style.display = "block";
+        darkMode=true;
     }
-    else{
-        document.getElementById("toggle-on").style.display = "none"
-        document.getElementById("toggle-off").style.display = "block"
-        darkMode=false
+    else {
+        document.getElementById("toggle-on").style.display = "none";
+        document.getElementById("toggle-off").style.display = "block";
+        darkMode=false;
     }
 }
