@@ -8,6 +8,13 @@
     height: 60px;
     width: 100%;
     background-color: rgb(23, 52, 52);
+    display: flex;
+    align-items: center;
+}
+
+.header__date {
+    color: #fff;
+    margin-left: 30px;
 }
 
 .header__logo {
@@ -16,6 +23,7 @@
     align-items: center;
     color: rgb(148, 134, 230);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
 }
 
 .header__logo h1{

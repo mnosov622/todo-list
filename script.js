@@ -3,6 +3,21 @@ const input = document.querySelector(".main__add-input");
 const list = document.querySelector(".main__list");
 const errorMsg = document.querySelector(".main__error-msg");
 const tasksList = document.querySelector(".main__tasks-list");
+const dateHolder = document.querySelector('.header__date');
+const date = new Date();
+
+const months = [
+    "January", "February", 
+    "March", "April", "May", 
+    "June", "July", "August",
+    "September", "October", 
+    "November", "December"
+];
+
+const day = date.getDate();
+const year = date.getFullYear();
+const monthName = months[date.getMonth()];
+dateHolder.innerHTML = ` Today is ${day} ${monthName}, ${year}`;
 
 form.addEventListener("submit", (e) => handleAdd(e));
 input.addEventListener("keyup", () => removeErrorMessage());
@@ -66,3 +81,5 @@ markAsComplete();
 function removeErrorMessage() {
     errorMsg.innerText = "";
 }
+
+
