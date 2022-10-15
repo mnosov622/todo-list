@@ -1,10 +1,11 @@
-const form = document.querySelector(".main__form");
-const input = document.querySelector(".main__add-input");
-const list = document.querySelector(".main__list");
-const errorMsg = document.querySelector(".main__error-msg");
-const tasksList = document.querySelector(".main__tasks-list");
+const form = document.querySelector('.main__form');
+const input = document.querySelector('.main__add-input');
+const list = document.querySelector('.main__list');
+const errorMsg = document.querySelector('.main__error-msg');
+const tasksList = document.querySelector('.main__tasks-list');
 const dateHolder = document.querySelector('.header__date');
 const date = new Date();
+let darkMode = false;
 
 const months = [
     "January", "February", 
@@ -109,3 +110,17 @@ function removeErrorMessage() {
 }
 
 
+// Dark Mode Function
+function myFunction() {
+    document.body.classList.toggle("dark-mode");
+    if (darkMode ==false) {
+        document.getElementById("toggle-off").style.display = "none";
+        document.getElementById("toggle-on").style.display = "block";
+        darkMode=true;
+    }
+    else {
+        document.getElementById("toggle-on").style.display = "none";
+        document.getElementById("toggle-off").style.display = "block";
+        darkMode=false;
+    }
+}
