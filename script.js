@@ -1,6 +1,7 @@
 const form = document.querySelector('.main__form');
 const input = document.querySelector('.main__add-input');
 const list = document.querySelector('.main__list');
+const totalTasks = document.querySelector('.main__list-total');
 const errorMsg = document.querySelector('.main__error-msg');
 const tasksList = document.querySelector('.main__tasks-list');
 const dateHolder = document.querySelector('.header__date');
@@ -24,6 +25,7 @@ form.addEventListener("submit", (e) => handleAdd(e));
 input.addEventListener("keyup", () => removeErrorMessage());
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+totalTasks.innerText = tasks.length;
 
 if (tasks.length > 0) {
     tasks.forEach((task) => {
@@ -60,6 +62,7 @@ function createItem() {
 
         tasks.push(input.value);
         localStorage.setItem("tasks", JSON.stringify(tasks));
+        totalTasks.innerText = tasks.length;
     }
     markAsComplete();
 }
