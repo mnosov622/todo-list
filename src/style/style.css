@@ -130,7 +130,7 @@ input {
     border: 1px solid darkcyan;
     padding: 8%;
     width: 100%;
-    
+
     background-color: var(--fourth-color);
 }
 
@@ -226,7 +226,7 @@ button:hover {
 .hamburger {
     width: 25px;
     height: 3px;
-    background: black;
+    background: white;
     display: block;
     position: absolute;
     top: 50%;
