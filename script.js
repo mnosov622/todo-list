@@ -62,7 +62,33 @@ function createItem() {
     }
     markAsComplete();
 }
+document.addEventListener('keydown', (event) => {
+    if (event.shiftKey) {
+        const itemsList = document.querySelectorAll(".main__list-item");
+        var first_ = itemsList[0];
+        var Last = itemsList[itemsList.length - 1];
+        itemsList.forEach((item) => {
+            if (item == first_) {
+                item.addEventListener("click", () => {
+                    itemsList.forEach((i) => {
+                        if (i == Last){
+                            i.addEventListener("click", ()=>{
+                                itemsList.forEach((j)=>{
+                                    j.classList.add("remove");
+                                    const icon = document.createElement("img");
+                                    icon.src = "./src/img/check.png";
+                                    icon.className = "add-icon";
+                                    j.appendChild(icon);
+                                })
+                            })
+                        }
+                    })
 
+                })
+            }
+        });
+    }
+});
 function markAsComplete () {
     const itemsList = document.querySelectorAll(".main__list-item");
     itemsList.forEach((item) => {
