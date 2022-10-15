@@ -365,3 +365,8 @@ button:hover {
     transform: translate3d(440px, 0, 0);
 }
 
+@media (max-width: 550px){
+    .main__list{
+        width: 90%;
+    }
+}
