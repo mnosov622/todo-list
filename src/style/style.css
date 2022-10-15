@@ -86,6 +86,11 @@ body{
     height: 80vh;
 }
 
+.main__list h5 {
+    color: gray;
+    font-size: 12px;
+}
+
 .main__list-item {
     margin-top: 5%;
     cursor: pointer;
