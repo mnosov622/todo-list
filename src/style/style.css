@@ -7,7 +7,7 @@
 :root {
     --primary-color: white;
     --secondary-color: white;
-    --third-color: black;
+    --third-color: white;
     --fourth-color: white;
     --fifth-color: #dcdcdc;
 }
@@ -15,7 +15,7 @@
 .dark-mode {
     --primary-color: #121212;
     --secondary-color: gray;
-    --third-color: white;
+    --third-color: #d4d4d4;
     --fourth-color: #d4d4d4;
     --fifth-color: #d4d4d4;
 }
