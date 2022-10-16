@@ -13,7 +13,7 @@
 }
 
 .dark-mode{
-    --primary-color: #121212;
+    /* --primary-color: #121212; */
     --secondary-color: gray;
     --third-color: white;
     --fourth-color: #D4D4D4;
@@ -91,7 +91,7 @@ body{
 }
 
 .main__list-title{
-    color: var(--third-color);
+    color: var(--primary-color);
 }
 
 .main__list {
