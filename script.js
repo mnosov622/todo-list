@@ -48,7 +48,6 @@ if (tasks.length > 0) {
         addedItem.innerText = task;
         tasksList.appendChild(addedItem);
         list.append(tasksList);
-        console.log(addedItem);
     });
 } else {
     list.style.display = "none";
@@ -114,6 +113,14 @@ function markAsComplete() {
             icon.src = "./src/img/check.png";
             icon.className = "add-icon";
             item.appendChild(icon);
+            tasks = tasks.filter((task) => task !== item.textContent);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            totalTasks.innerText = tasks.length;
+        });
+        item.addEventListener("transitionend", () => {
+            if (item.classList.contains("remove")) {
+                item.remove();
+            }
         });
     });
 }
