@@ -119,3 +119,4 @@ function handleAdd(e) {
 // INIT
 form.addEventListener("submit", (e) => handleAdd(e));
 input.addEventListener("keyup", () => removeErrorMessage());
+input.focus();
