@@ -4,7 +4,7 @@
     font-family: "Poppins";
 }
 
-:root{
+:root {
     --primary-color: white;
     --secondary-color: white;
     --third-color: black;
@@ -12,7 +12,7 @@
     --fifth-color: #dcdcdc;
 }
 
-.dark-mode{
+.dark-mode {
     --primary-color: #121212;
     --secondary-color: gray;
     --third-color: white;
@@ -20,7 +20,7 @@
     --fifth-color: #D4D4D4;
 }
 
-.dark-mode::before{
+.dark-mode::before {
     content: "";
     position: absolute;
     top: 0;
@@ -32,7 +32,7 @@
     opacity: 0.5;
 }
 
-body{
+body {
     background-image: url(/pexels-polina-kovaleva-5717464.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,7 +63,7 @@ body{
     text-align: center;
 }
 
-.header__logo h1{
+.header__logo h1 {
     padding-left: 10px;
 }
 
@@ -75,22 +75,22 @@ body{
     height: 50px;
 }
 
-.toggle{
+.toggle {
     cursor: pointer;
     font-size: xx-large;
     margin-right: 10px;
 }
 
-#toggle-on{
+#toggle-on {
     display: none;
     color: #121212;
 }
 
-#toggle-off{
+#toggle-off {
     color: white;
 }
 
-.main__list-title{
+.main__list-title {
     color: var(--third-color);
 }
 
@@ -107,6 +107,7 @@ body{
 
 .main__list-item {
     margin-top: 5%;
+    padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in;
     box-shadow: 2px 2px 2px rgba(206, 203, 203, 0.5);
@@ -149,7 +150,7 @@ input {
     border: 1px solid darkcyan;
     padding: 8%;
     width: 100%;
-    
+
     background-color: var(--fourth-color);
 }
 
