@@ -20,8 +20,22 @@
     --fifth-color: #d4d4d4;
 }
 
-body {
-    background-color: var(--primary-color);
+.dark-mode::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+body{
+    background-image: url(/pexels-polina-kovaleva-5717464.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: 0.7s, ease-in-out;
 }
 
