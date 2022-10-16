@@ -28,9 +28,6 @@ const year = date.getFullYear();
 const monthName = months[date.getMonth()];
 dateHolder.innerHTML = ` Today is ${day} ${monthName}, ${year}`;
 
-form.addEventListener("submit", (e) => handleAdd(e));
-input.addEventListener("keyup", () => removeErrorMessage());
-
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 totalTasks.innerText = tasks.length;
 
@@ -56,12 +53,6 @@ function addTaskEntry(task) {
 
 if (tasks.length > 0) for (const task of tasks) addTaskEntry(task);
 else list.style.display = "none";
-
-function handleAdd(e) {
-    e.preventDefault();
-    createItem();
-    input.value = "";
-}
 
 function createItem() {
     if (input.value.trim() === "") {
@@ -118,3 +109,13 @@ function myFunction() {
         darkMode = false;
     }
 }
+
+function handleAdd(e) {
+    e.preventDefault();
+    createItem();
+    input.value = "";
+}
+
+// INIT
+form.addEventListener("submit", (e) => handleAdd(e));
+input.addEventListener("keyup", () => removeErrorMessage());
