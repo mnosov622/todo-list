@@ -10,6 +10,7 @@
     --third-color: black;
     --fourth-color: white;
     --fifth-color: #dcdcdc;
+    --sixth-color: rgb(23, 52, 52);
 }
 
 .dark-mode{
@@ -18,6 +19,7 @@
     --third-color: white;
     --fourth-color: #D4D4D4;
     --fifth-color: #D4D4D4;
+    --sixth-color: rgb(0, 0, 0);
 }
 
 .dark-mode::before{
@@ -37,12 +39,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.7s, ease-in-out;
+
 }
 
 .header {
     height: 60px;
     width: 100%;
-    background-color: rgb(23, 52, 52);
+    background-color: var(--sixth-color);
     display: flex;
     align-items: center;
 }
@@ -83,11 +86,11 @@ body {
 
 #toggle-on{
     display: none;
-    color: #121212;
+    color: #8a5bc8;
 }
 
 #toggle-off{
-    color: white;
+    color: #fff;
 }
 
 .main__list-title{
@@ -149,6 +152,7 @@ input {
     border: 1px solid darkcyan;
     padding: 8%;
     width: 100%;
+    border-radius: 10px;
 
     background-color: var(--fourth-color);
 }
@@ -167,6 +171,7 @@ button {
     width: 100%;
     transition: background-color .2s ease-in;
     background-color: var(--fifth-color);
+    border-radius: 10px;
 }
 
 button:hover {
@@ -184,7 +189,7 @@ button:hover {
     text-align: center;
     float: left;
     right: 0;
-    bottom: 55px;
+    bottom: 80px;
     position: absolute;
     height: 0px;
     width: 100%;
