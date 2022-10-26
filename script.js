@@ -115,7 +115,6 @@ document.addEventListener('keydown', (event) => {
 function markAsComplete () {
     const itemsList = document.querySelectorAll(".main__list-item");
     itemsList.forEach((item) => {
-        console.log();
         const deleteTask = item.querySelector(".delete_task");
         deleteTask.addEventListener("click" , ()=>{
             (deleteTask.parentElement.parentElement.parentElement.removeChild(deleteTask.parentElement.parentElement));
@@ -137,6 +136,8 @@ function markAsComplete () {
         })
         item.addEventListener("click", () => {
             const curr = item.querySelector(".check");
+            const curr2 = item.querySelector(".task_content");
+            curr2.classList.contains("remove")?curr2.classList.remove("remove"):curr2.classList.add("remove");
             curr.classList.contains("hide")?curr.classList.remove("hide"):curr.classList.add("hide");
         });
     });
