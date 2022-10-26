@@ -4,7 +4,7 @@
     font-family: "Poppins";
 }
 
-:root{
+:root {
     --primary-color: white;
     --secondary-color: white;
     --third-color: black;
@@ -13,8 +13,8 @@
     --sixth-color: rgb(23, 52, 52);
 }
 
-.dark-mode{
-    /* --primary-color: #121212; */
+.dark-mode {
+    --primary-color: #121212;
     --secondary-color: gray;
     --third-color: white;
     --fourth-color: #D4D4D4;
@@ -22,7 +22,7 @@
     --sixth-color: rgb(0, 0, 0);
 }
 
-.dark-mode::before{
+.dark-mode::before {
     content: "";
     position: absolute;
     top: 0;
@@ -37,9 +37,7 @@
 body {
     background-image: url("../img/pexels-polina-kovaleva-5717464.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
     transition: 0.7s, ease-in-out;
-
 }
 
 .header {
@@ -66,7 +64,7 @@ body {
     text-align: center;
 }
 
-.header__logo h1{
+.header__logo h1 {
     padding-left: 10px;
 }
 
@@ -78,29 +76,33 @@ body {
     height: 50px;
 }
 
-.toggle{
+.toggle {
     cursor: pointer;
     font-size: xx-large;
     margin-right: 10px;
 }
 
-#toggle-on{
+#toggle-on {
     display: none;
     color: #8a5bc8;
 }
 
-#toggle-off{
+#toggle-off {
     color: #fff;
 }
 
-.main__list-title{
+main {
+    min-height: calc(100vh - 220px);
+}
+
+.main__list-title {
     color: var(--primary-color);
 }
 
 .main__list {
     margin: 2%;
     max-width: 20%;
-    height: 80vh;
+    height: fit-content;
 }
 
 .main__list h5 {
@@ -186,20 +188,20 @@ button:hover {
 .footer-main {
     display: flex;
     flex-direction: column-reverse;
-    text-align: center;
-    float: left;
-    right: 0;
-    bottom: 80px;
-    position: absolute;
-    height: 0px;
+    justify-content: flex-start;
+    /* text-align: center; */
+    /* position: relative; */
+    /* float: left; */
+    /* right: 0; */
+    /* bottom: 80px; */
+    /* position: absolute; */
+    /* height: 0px; */
+    height: 85px;
     width: 100%;
 }
 
 .footer-icons {
-    height: 0px;
     border: solid 0.5px;
-    float: right;
-    background-color: #d00;
     width: 20px;
 }
 
@@ -223,6 +225,12 @@ button:hover {
 .menu {
     -webkit-filter: url("#shadowed-goo");
     filter: url("#shadowed-goo");
+    position: relative;
+    margin-left: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    left: 0;
+    bottom: 0;
 }
 
 .menu-item,
@@ -241,6 +249,7 @@ button:hover {
     transition: -webkit-transform ease-out 200ms;
     transition: transform ease-out 200ms;
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+    /* display: none; */
 }
 
 .menu-open {
@@ -291,15 +300,6 @@ button:hover {
 .menu-open:checked+.menu-open-button .hamburger-3 {
     -webkit-transform: translate3d(0, 0, 0) rotate(-35deg);
     transform: translate3d(0, 0, 0) rotate(-35deg);
-}
-
-.menu {
-    position: absolute;
-    margin-left: 10px;
-    box-sizing: border-box;
-    font-size: 20px;
-    left: 0;
-    bottom: 0;
 }
 
 .menu-item:hover {
