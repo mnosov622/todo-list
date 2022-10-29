@@ -11,17 +11,14 @@
     --fourth-color: white;
     --fifth-color: #dcdcdc;
     --sixth-color: rgb(23, 52, 52);
-    --seventh-color: chartreuse;
 }
 
 .dark-mode {
-    --primary-color: #121212;
     --secondary-color: gray;
     --third-color: white;
     --fourth-color: #D4D4D4;
     --fifth-color: #D4D4D4;
     --sixth-color: rgb(0, 0, 0);
-    --seventh-color: rgb(47, 88, 2);
 }
 
 .dark-mode::before {
@@ -52,16 +49,15 @@ body {
 }
 
 .header__date {
-    margin: 2rem 0;
-    background-color: var(--seventh-color);
+    margin: 1rem 0;
+    background-color: transparent;
     display: inline-block;
     min-width: fit-content;
     width: 15rem;
     height: 3rem;
     padding: 5px;
-    box-shadow: 1px 2px 10px 0px rgb(78, 150, 6);
     border-radius: 10px;
-    color: var(--third-color);
+    color: white
 }
 
 .header__logo {
