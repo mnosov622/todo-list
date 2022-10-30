@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
-    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="src/style/style.css">
     
     <script src="./script.js" defer></script>
 
@@ -25,28 +26,32 @@
 
 </head>
 
+
 <body>
 
     <header class="header">
-        <div class="header__date">
-
-        </div>
         <div class="header__logo">
-            <a href="https://mnosov622.github.io/todo-list/"><img class="header__logo-img" src="./src/img/TODO_logo.png" alt="todo logo"></a>
+            <a href="https://mnosov622.github.io/todo-list/"><img class="header__logo-img" src="./src/img/TODO_logo.png"
+                    alt="todo logo"></a>
             <h1>TO DO Planner</h1>
-        </div>
+            </div>
+        
         <div class="toggle">
             <i id="toggle-on" onclick="myFunction()" class="fa-solid fa-toggle-on"></i>
             <i id="toggle-off" onclick="myFunction()" class="fa-solid fa-toggle-off"></i>
         </div>
     </header>
 
+    
+
     <main class="main">
+        
         <div class="main__list">
+            <div class="header__date">
+        </div>
             <h4 class="main__list-title">Todo list:</h4>
             <h5>Total: <span class="main__list-total"></span></h5>
             <ul class="main__tasks-list">
-
             </ul>
         </div>
 
@@ -56,6 +61,7 @@
             <button type="submit">Add</button>
             <button class="delBtn" type="button">Delete All <img src="src/img/bin.png" width="12px"></button>
         </form>
+
     </main>
 
     <!-- Footer -->

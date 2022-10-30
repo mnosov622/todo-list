@@ -14,7 +14,6 @@
 }
 
 .dark-mode {
-    --primary-color: #121212;
     --secondary-color: gray;
     --third-color: white;
     --fourth-color: #D4D4D4;
@@ -37,6 +36,7 @@
 body {
     background-image: url("../img/pexels-polina-kovaleva-5717464.jpg");
     background-repeat: no-repeat;
+    background-size: auto;
     transition: 0.7s, ease-in-out;
 }
 
@@ -49,9 +49,15 @@ body {
 }
 
 .header__date {
-    color: #fff;
-    margin-left: 30px;
-    position: absolute;
+    margin: 1rem 0;
+    background-color: transparent;
+    display: inline-block;
+    min-width: fit-content;
+    width: 15rem;
+    height: 3rem;
+    padding: 5px;
+    border-radius: 10px;
+    color: white
 }
 
 .header__logo {
@@ -61,13 +67,11 @@ body {
     color: rgb(148, 134, 230);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    text-align: center;
 }
 
 .header__logo h1 {
     padding-left: 10px;
 }
-
 
 .header__logo-img {
     padding-top: .7%;
@@ -92,7 +96,7 @@ body {
 }
 
 main {
-    min-height: calc(100vh - 220px);
+    min-height: calc(100vh - 160px);
 }
 
 .main__list-title {
@@ -100,9 +104,11 @@ main {
 }
 
 .main__list {
-    margin: 2%;
-    max-width: 20%;
+    padding: 1rem;
+    width: 17rem;
+    height: 60vh;
     height: fit-content;
+    margin-bottom: 100px;
 }
 
 .main__list h5 {
@@ -116,9 +122,10 @@ main {
     transition: all 0.3s ease-in;
     box-shadow: 2px 2px 2px rgba(206, 203, 203, 0.5);
     word-break: break-all;
-    position: relative;
     background-color: var(--secondary-color);
     color: var(--third-color);
+    min-width: fit-content;
+    position: relative;
 }
 
 .main__list-item:hover {
@@ -144,18 +151,19 @@ main {
 
 .main__form {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 20rem;
+    width: 13rem;
 }
+
 
 input {
     border: 1px solid darkcyan;
     padding: 8%;
     width: 100%;
-    border-radius: 10px;
-
+    min-width: fit-content;
     background-color: var(--fourth-color);
 }
 
@@ -181,6 +189,7 @@ button:hover {
     color: #fff;
 }
 
+
 .remove {
     text-decoration: line-through;
 }
@@ -189,18 +198,12 @@ button:hover {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
-    /* text-align: center; */
-    /* position: relative; */
-    /* float: left; */
-    /* right: 0; */
-    /* bottom: 80px; */
-    /* position: absolute; */
-    /* height: 0px; */
     height: 85px;
     width: 100%;
 }
 
 .footer-icons {
+    height: 60px;
     border: solid 0.5px;
     width: 20px;
 }
@@ -225,12 +228,10 @@ button:hover {
 .menu {
     -webkit-filter: url("#shadowed-goo");
     filter: url("#shadowed-goo");
-    position: relative;
+    position:relative;
     margin-left: 10px;
     box-sizing: border-box;
     font-size: 20px;
-    left: 0;
-    bottom: 0;
 }
 
 .menu-item,
@@ -240,6 +241,8 @@ button:hover {
     width: 45px;
     height: 45px;
     position: absolute;
+    bottom:0;
+    left:0;
     color: white;
     text-align: center;
     line-height: 80px;
@@ -249,7 +252,6 @@ button:hover {
     transition: -webkit-transform ease-out 200ms;
     transition: transform ease-out 200ms;
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
-    /* display: none; */
 }
 
 .menu-open {
@@ -384,4 +386,28 @@ button:hover {
     transition-duration: 490ms;
     -webkit-transform: translate3d(440px, 0, 0);
     transform: translate3d(440px, 0, 0);
+}
+
+
+@media screen and (max-width:1450px) {
+
+    main {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .main__form {
+        position: static;
+        margin: auto 0;
+        top: 20rem;
+    }
+    
+}
+
+@media screen and (max-width:900px) {
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
 }

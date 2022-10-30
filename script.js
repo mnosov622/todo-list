@@ -31,7 +31,7 @@ delBtn.style.display = "none";
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 totalTasks.innerText = tasks.length;
 
-if (tasks.length > 0) {
+if (tasks.length >= 0) {
     delBtn.style.display = "block";
     tasks.forEach((task) => {
         const addedItem = document.createElement("li");
